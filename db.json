@@ -2,53 +2,62 @@
   "messages": [
     {
       "role": "user",
-      "content": "what is my name",
-      "id": "3f4574c7-c5d5-4779-87aa-bd9e3501728f",
-      "createdAt": "2025-05-22T06:22:42.045Z"
+      "content": "how is the weather",
+      "id": "eb0ddca1-49a2-40dd-bc77-48887e4bc5e0",
+      "createdAt": "2025-05-22T07:16:26.746Z"
     },
     {
       "role": "assistant",
-      "content": "I don't know your name. How would you like me to address you?",
+      "content": "Could you please specify the location for which you would like to know the weather?",
       "refusal": null,
       "annotations": [],
-      "id": "7c33253c-da9c-44b8-beca-6e506f45caad",
-      "createdAt": "2025-05-22T06:22:43.499Z"
+      "id": "1780b805-24da-41d1-b3e4-eaaef662ce79",
+      "createdAt": "2025-05-22T07:16:28.008Z"
     },
     {
       "role": "user",
-      "content": "what is the weather",
-      "id": "5e39b113-d3d0-4ad4-a1b9-a14e9662a174",
-      "createdAt": "2025-05-22T06:22:57.184Z"
+      "content": "lagos",
+      "id": "e9eee8af-73c4-4598-b5a3-46ced85abad0",
+      "createdAt": "2025-05-22T07:16:36.214Z"
     },
     {
       "role": "assistant",
       "content": null,
       "tool_calls": [
         {
-          "id": "call_bDQZ5nCYDIl1KkNtDfVdmVdZ",
+          "id": "call_ecGGblupeNYDlDOFrmMIVHWX",
           "type": "function",
           "function": {
             "name": "get_weather",
-            "arguments": "{}"
+            "arguments": "{\"reasoning\":\"To provide the current weather information for Lagos.\"}"
           }
         }
       ],
       "refusal": null,
       "annotations": [],
-      "id": "bd89b7cb-e41f-4a4f-8c3d-c79046681958",
-      "createdAt": "2025-05-22T06:22:59.196Z"
+      "id": "07093f40-216f-4f9a-a6fc-f50474e08dc1",
+      "createdAt": "2025-05-22T07:16:37.533Z"
+    },
+    {
+      "role": "tool",
+      "content": "It's sunny af",
+      "tool_call_id": "call_ecGGblupeNYDlDOFrmMIVHWX",
+      "id": "904744b2-a1bb-4a63-b7e0-f0df154aaa46",
+      "createdAt": "2025-05-22T07:16:37.534Z"
     },
     {
       "role": "user",
-      "content": "my name is koya",
-      "id": "3dccec47-3f8b-46b0-94c5-2892aa22a969",
-      "createdAt": "2025-05-22T06:23:34.967Z"
+      "content": "what was the weather again",
+      "id": "ff9efa32-97bd-4493-a380-e50fdf8824c3",
+      "createdAt": "2025-05-22T07:20:12.983Z"
     },
     {
-      "role": "user",
-      "content": "weather",
-      "id": "70f1282c-6e4e-4891-86e4-941af564b87b",
-      "createdAt": "2025-05-22T06:24:05.384Z"
+      "role": "assistant",
+      "content": "The weather in Lagos is currently sunny.",
+      "refusal": null,
+      "annotations": [],
+      "id": "a59ef407-8013-42ba-a2d5-695f1a69b68e",
+      "createdAt": "2025-05-22T07:20:13.828Z"
     }
   ]
 }

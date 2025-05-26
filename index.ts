@@ -13,12 +13,13 @@ if (!userMessage) {
 
 const weatherTool = {
   name: 'get_weather',
-  parameters: z.object({}),
+  description: `Use this to get weather`,
+  parameters: z.object({
+    reasoning: z.string().describe('why did you pick this tool?'),
+  }),
 }
 
 const response = await runAgent({
   userMessage,
   tools: [weatherTool],
 })
-
-console.log(response)
