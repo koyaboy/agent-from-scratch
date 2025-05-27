@@ -1,0 +1,21 @@
+import { z } from 'zod'
+import type { ToolFn } from '../../types'
+import fetch from 'node-fetch'
+
+export const dadJokeToolDefinition = {
+  name: 'dad_joke',
+  parameters: z.object({}),
+  description: 'Use this to get a dad joke',
+}
+
+type Args = z.infer<typeof dadJokeToolDefinition.parameters>
+
+export const dadJoke: ToolFn<Args, string> = async ({ toolArgs }) => {
+  const response = await fetch('https://icanhazdadjoke.com', {
+    headers: {
+      Accept: 'application/json',
+    },
+  })
+  const data = await response.json()
+  return data.joke
+}
